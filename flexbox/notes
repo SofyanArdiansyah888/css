@@ -1,0 +1,88 @@
+* Terminology
+    - Flex Container
+    - Flex Item 
+
+    - Main Axis (x) ------->
+    - Cross Axis (y) |
+                     |
+                     |
+                     |   
+
+    <div class="container">
+        <div class="items"></div>
+        <div class="items"></div>
+        <div class="items"></div>
+    </div>
+
+* Flex Container Property
+  - display
+    # flex 
+    # inline-flex (Tidak ada sisa background kosong)
+
+  - flex-direction
+    # column
+    # row
+    # row-reverse
+    # column-reverse
+
+  - flex-wrap
+    # wrap (The flex container is multi-line.)
+    # nowrap (The flex container is single-line)
+
+  - flex-flow
+    # row/column wrap/nowrap (shorthand for direction and flex-wrap)
+
+  - justify-content
+    The justify-content property aligns flex items along the main axis of the current line of the flex container.
+    # flex-start (Flex items are packed toward the start of the line)
+    # flex-end (Flex items are packed toward the end of the line)
+    # center (Flex items are packed toward the center of the line)
+    # space-between (Flex items are evenly distributed in the line)
+    # space-around (Flex items are evenly distributed in the line, with half-size spaces on either end)
+    # space-evently (The alignment subjects are evenly distributed in the alignment container, with a full-size space on either end)
+
+  - align-items
+    Flex items can be aligned in the cross axis of the current line of the flex container, similar to justify-content but in the perpendicular direction
+    
+    # auto (Defers cross-axis alignment control to the value of align-items on the parent box)
+    # flex-start (The cross-start margin edge of the flex item is placed flush with the cross-start edge of the line)
+    # flex-end (The cross-end margin edge of the flex item is placed flush with the cross-end edge of the line)
+    # center (The flex item’s margin box is centered in the cross axis within the line)
+    # baseline (The flex item participates in baseline alignment: all participating flex items on the line are aligned such that their baselines align, and the item with the largest distance between its baseline and its cross-start margin edge is placed flush against the cross-start edge of the line)
+    # stretch (If the cross size property of the flex item computes to auto, and neither of the cross-axis margins are auto, the flex item is stretched)
+  
+  - align-content (for multiline flex only) 
+    The align-content property aligns a flex container’s lines within the flex container when there is extra space in the cross-axis, similar to how justify-content aligns individual items within the main-axis. Note, this property has no effect on a single-line flex container.  
+
+    # flex-start (Lines are packed toward the start of the flex container)
+    # flex-end (Lines are packed toward the end of the flex container)
+    # center (Lines are packed toward the center of the flex container)
+    # space-between (Lines are evenly distributed in the flex container)
+    # space-around (Lines are evenly distributed in the flex container, with half-size spaces on either end)
+    # stretch (Lines stretch to take up the remaining space)
+
+* Flex Item Property 
+    - order
+        # -1 (make item to start)
+        # 0  (make item to normal position)
+        # 1  (make item to end)
+    - align-self
+       # auto
+       # stretch
+       # flex-start
+       # flex-end
+       # center
+       # baseline
+    - Flexibility   
+       The defining aspect of flex layout is the ability to make the flex items “flex”, altering their width/height to fill the available space in the main dimension. This is done with the flex property. A flex container distributes free space to its items (proportional to their flex grow factor) to fill the container, or shrinks them (proportional to their flex shrink factor) to prevent overflow.
+       ^ flex-grow
+         # 0
+         # 1   
+       ^ flex-shrink
+         # 0
+         # 1
+       ^ flex-basis
+         # width (px,%, or other)   
+       ^ flex
+         # grow shrink basis example : 0 0 auto or 1 0 30%
+ 
