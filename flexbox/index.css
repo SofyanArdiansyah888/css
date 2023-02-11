@@ -1,10 +1,8 @@
 .parent {
 display: flex;
-flex-wrap: wrap;
-align-content: flex-end;
 height: 250px;
 }
 
-.child {
-width: 40%;
+.child--featured {
+    flex: 0 1 10%;
 }
